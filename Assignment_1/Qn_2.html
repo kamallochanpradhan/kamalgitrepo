@@ -1,0 +1,51 @@
+<!DOCTYPE html> 
+<html> 
+  
+<head> 
+    <title> 
+       Print If Status Complete
+    </title> 
+      
+    <script type="text/javascript"> 
+      
+      var objStatus = {
+    statusprop: [{ status: 'pending' },
+    {  status: 'complete' },
+    {  status: 'in progress' }
+	
+    ],
+
+    funStatus: function () {
+        for (var i = 0; i < this.statusprop.length; i++) {
+            var objuser = this.statusprop[i];
+            if (objuser.status === 'complete') {
+                console.log("Status : " + objuser.status + "");
+            }
+        }
+    },
+};
+		
+    </script> 
+</head> 
+  
+<body> 
+    <center> 
+        <h1>Check Prime No</h1> 
+          
+        <h4>check number is prime or not</h4> 
+          
+        <hr color="Green"> 
+          
+        <form name="myform"> 
+            Enter the number: 
+            <input type="text" name=n value=""> 
+              
+            <br><br> 
+              
+            <input type="button" value="Check" onClick="objStatus.funStatus()"> 
+            <br> 
+        </form> 
+    </center> 
+</body> 
+  
+</html> 
